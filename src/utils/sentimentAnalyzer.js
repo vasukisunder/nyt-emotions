@@ -5,12 +5,12 @@ const sentiment = new Sentiment();
 
 // Define emotion categories
 const emotions = {
-  joy: ['happy', 'joy', 'celebration', 'delight', 'triumph', 'pleased', 'glad'],
-  anger: ['angry', 'fury', 'outrage', 'rage', 'wrath', 'indignation'],
-  sadness: ['sad', 'grief', 'sorrow', 'depression', 'regret', 'despair'],
-  fear: ['fear', 'terror', 'horror', 'dread', 'anxiety', 'panic'],
-  surprise: ['surprise', 'shock', 'amazement', 'astonish', 'unexpected'],
-  disgust: ['disgust', 'revulsion', 'repulsion', 'distaste', 'aversion']
+  joy: ['happy', 'joy', 'celebration', 'delight', 'triumph', 'pleased', 'glad', 'exciting', 'enthusiastic', 'optimistic'],
+  anger: ['angry', 'fury', 'outrage', 'rage', 'wrath', 'indignation', 'irritation', 'annoyance', 'frustrated'],
+  sadness: ['sad', 'grief', 'sorrow', 'depression', 'regret', 'despair', 'melancholy', 'gloomy', 'heartbreak'],
+  fear: ['fear', 'terror', 'horror', 'dread', 'anxiety', 'panic', 'afraid', 'frightened', 'nervous', 'worried'],
+  surprise: ['surprise', 'shock', 'amazement', 'astonish', 'unexpected', 'startled', 'sudden', 'remarkable'],
+  disgust: ['disgust', 'revulsion', 'repulsion', 'distaste', 'aversion', 'repugnant', 'offensive', 'repellent']
 };
 
 // Analyze text for sentiment and emotions
@@ -68,13 +68,13 @@ export const analyzeText = (text) => {
 // Map emotions to colors
 export const getEmotionColor = (emotion) => {
   const colorMap = {
-    joy: 0x2ecc71,      // green
-    anger: 0xe74c3c,    // red
-    sadness: 0x3498db,  // blue
-    fear: 0x9b59b6,     // purple
-    surprise: 0xf39c12, // orange
-    disgust: 0x1abc9c,  // teal
-    neutral: 0xbdc3c7   // gray
+    joy: 0x42f59b,      // vibrant mint green
+    anger: 0xff4d4d,    // bright red
+    sadness: 0x5da9ff,  // light blue
+    fear: 0xc05cff,     // rich purple
+    surprise: 0xffbb33, // bright gold
+    disgust: 0x16e6cc,  // turquoise
+    neutral: 0xd9d9d9   // light gray
   };
   
   return colorMap[emotion] || colorMap.neutral;
